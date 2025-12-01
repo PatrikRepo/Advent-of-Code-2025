@@ -68,16 +68,15 @@ uint64_t turnPastZero(const std::vector<Instruction> &instructions)
 
 int main()
 {
-	uint64_t result = 0;
+	uint64_t resultA = 0;
+	uint64_t resultB = 0;
 
 	std::vector<Instruction> instructions;
 	parseInput(instructions);
-	result = turnDial(instructions);
-
-	std::cout << "resultA: " << result << '\n';
+	resultA = turnDial(instructions);
+	resultB = turnPastZero(instructions);
 	
-	result = turnPastZero(instructions);
-	std::cout << "resultB: " << result << std::endl;
+	std::cout << "resultA: " << resultA << '\n' << "resultB: " << resultB << std::endl;
 
 	return 0;
 }
